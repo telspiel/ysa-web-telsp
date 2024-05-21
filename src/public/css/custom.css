@@ -1,0 +1,17 @@
+.custom-control.custom-radio {
+    display: inline;
+    margin-right: 25px;
+}
+.form-control:disabled, .form-control[readonly] {
+    background-color: #f8f9fa;
+    opacity: 1;
+}
+.pcoded-content input.form-control {
+    height: 40px;
+    border-radius: 2px;
+}
+
+.form-group.mt-4.pt-1.btn-div button {
+    width: 100px;
+    margin-top: 6px;
+}

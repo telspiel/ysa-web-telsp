@@ -1,0 +1,127 @@
+{{> sideNav }}
+<!-- [ Main Content ] start -->
+<div class="pcoded-main-container">
+  <div class="pcoded-content">
+    <!-- [ Main Content ] start -->
+    <div class="row contant-holder-dash">
+      
+            <!-- order-card start -->
+            <div class="col-md-4 dash-tab">
+                <div class="card bg-c-primary-light order-card">
+                    <div class="card-body">
+                        <h6 class="text-white">SMS Count Today</h6>
+                        <h2 class="text-right text-white">
+                            <i class="feather clock icon-clock float-left"></i>
+                            <span class="counter-Data" id="totalSmsToday">0</span>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 dash-tab d-none">
+                <div class="card bg-c-primary order-card">
+                    <div class="card-body">
+                        <h6 class="text-white">SMS Current Week</h6>
+                        <h2 class="text-right text-white">
+                            <i class="feather calendar icon-calendar float-left"></i>
+                            <span id="totalSmsWeek">0</span>
+                        </h2>
+                        {{!-- <p class="m-b-0">This Month Report<span class="float-right"></span></p> --}}
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 dash-tab">
+                <div class="card bg-c-primary order-card">
+                    <div class="card-body">
+                        <h6 class="text-white">SMS Count Current Month</h6>
+                        <h2 class="text-right text-white">
+                            <i class="feather check-square icon-check-square float-left"></i>
+                            <span id="totalSmsMonth">0</span>
+                        </h2>
+                        {{!-- <p class="m-b-0">Previous 2 Months Report<span class="float-right"></span></p> --}}
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 dash-tab d-none">
+                <div class="card bg-c-red order-card">
+                    <div class="card-body">
+                        <h6 class="text-white">Total Sms Two Months</h6>
+                        <h2 class="text-right text-white">
+                            <i class="feather mail icon-mail float-left"></i>
+                            <span id="totalSmsTwoMonths">0</span>
+                        </h2>
+                        {{!-- <p class="m-b-0">Average Message Report<span class="float-right"></span></p> --}}
+                    </div>
+                </div>
+            </div>
+            <!-- order-card end -->
+            <!-- order-card start -->
+            <div class="col-md-4 dash-tab">
+                <div class="card bg-c-secondary order-card">
+                    <div class="card-body p-b-15" style="padding-bottom: 15px;">
+                        <h6 class="text-white">Credit</h6>
+                        <h2 class="text-right text-white">
+                            <i class="feather check-circle icon-check-circle float-left"></i>
+                            <p class="m-b-5 f-16">Available Credit :&nbsp;&nbsp;<span class="float-right" id="availableCredits">0</span></p>
+                            <p class="m-b-0 f-16">Effective Credit :&nbsp;&nbsp;<span class="float-right" id="effectiveCredits">0</span></p>
+                        </h2>
+                        {{!-- <p class="m-b-0">Previous Quartly Report<span class="float-right"></span></p> --}}
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-xl-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h5>Today Summary Report</h5>
+                    </div>
+                    <div class="card-body">
+                        {{!-- <div id="area-chart-1"></div> --}}
+
+                        {{!-- <div id="chart"></div> --}}
+                        <div id="summaryReport"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-xl-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h5>Hourly Report</h5>
+                    </div>
+                    <div class="card-body">
+                        {{!-- <div class="toolbar btn-group">
+                            <button id="one_month" class="btn btn-sm btn-outline-primary">1M</button>
+                            <button id="six_months" class="btn btn-sm btn-outline-primary">6M</button>
+                            <button id="one_year" class="btn btn-sm btn-outline-primary active">1Y</button>
+                            <button id="ytd" class="btn btn-sm btn-outline-primary">YTD</button>
+                            <button id="all" class="btn btn-sm btn-outline-primary">ALL</button>
+                        </div> --}}
+                        <div id="hourlyGraph"></div>
+                        {{!-- <div id="hourlyGraph"></div> --}}
+                    </div>
+                </div>
+            </div>
+      <div class="col-md-6 py-5">
+        <div id="summaryReport"></div>
+      </div>
+
+      <div class="col-md-6 py-5">
+        <div id="hourlyGraph"></div>
+      </div>
+    </div>
+    <!-- [ Main Content ] end -->
+
+  </div>
+  <div class="footer-div">
+    <span class="copy float-left">
+      <p id="demo"></p> &copy; All Rights Reserved
+    </span>
+    <span class="float-right">
+      <ul class="social-media-icon">
+        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
+      </ul>
+    </span>
+  </div>
+</div>

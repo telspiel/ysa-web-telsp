@@ -1,0 +1,8 @@
+<div class="form-group row">
+  <label for="{{ id }}" class="col-sm-3 col-form-label">{{ label }}</label>
+  <div class="col-sm-9">
+    <input type="{{ type }}" class="form-control" id="{{ id }}" name="{{ name }}" value="{{ value }}" title="{{ title }}"
+      {{#if pattern}} pattern="{{ pattern }}" {{/if}} placeholder="{{ placeholder }}" {{#if required}} required{{/if}} {{#if disabled}} disabled{{/if}}
+      {{#if readonly}} readonly{{/if}} />
+  </div>
+</div>

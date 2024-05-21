@@ -1,0 +1,114 @@
+.login-div input[type=text],.login-div input[type=password] {
+    height: 45px;
+    border-radius: 2px;
+}
+button.btn.btn-primary.login-btn {
+    /* padding: 10px 25px; */
+    /* font-size: 18px; */
+    padding: 7px 15px;
+    font-size: 14px;
+    width: 100%;
+    border-radius: 25px;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+.col-md-12.logo {
+    background: #36d996;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.login-btn{
+    box-shadow: 0 11px 14px -10px #0000005e;
+}
+
+input[type=text],input[type=password]{
+    /* box-shadow: 0 8px 6px -6px #0000005e; */
+    box-shadow: 0 11px 14px -10px #0000005e;
+    height: 44px;
+}
+
+.checkbox label input[type=checkbox] {
+    display: none; /* Hide the default checkbox */
+  }
+  
+  /* Style the artificial checkbox */
+  .checkbox label span {
+    height: 12px;
+    width: 12px;
+    border: 1px solid grey;
+    display: inline-block;
+    position: relative;
+    background: #fff;
+    border-radius: 3px;
+  }
+  
+  /* Style its checked state...with a ticked icon */
+  [type=checkbox]:checked + span:before {
+    content: '\2714';
+    /* position: absolute; */
+    top: -7px;
+    left: 1px;
+    color: #e951a5;
+  }
+
+body { margin: 0 }
+  .row, .col { overflow: hidden; position: absolute; }
+  .row { left: 0; right: 0; }
+  .col { top: 0; bottom: 0; }
+  .scroll-x { overflow-x: auto; }
+  .scroll-y { overflow-y: auto; }
+
+  /* .header.row { height: 75px; top: 0; } */
+  .body.row { top: 0; bottom: 50px; }
+  .footer.row { height: 50px; bottom: 0; }
+
+  .form-block img{
+    width: 200px;
+    -webkit-filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, 0.178));
+    filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, 0.178));
+}
+  .social-media-icon .fa{
+    color: #fff;
+  }
+
+  .social-media-icon .fa:hover{
+    color: #e951a5;
+  }
+
+  .image-block{
+      background-color: white;
+      box-shadow: -4px 0px 10px 1px #aaaaaa6b;
+  }
+
+  input.form-control{
+    border: 1px solid #e951a5;
+    border-radius: 20px;
+    /* max-width: 40vh; */
+    margin: 0 auto;
+    padding: 18px;
+    font-size: 15px;
+  }
+  
+  input.form-control:active,input.form-control:focus{
+    box-shadow: 0 0 0 0.1rem rgb(234 83 163 / 64%);
+    border-color:#e951a5;
+  }
+  
+  .checkbox input[type=checkbox]{
+    display: inline-block;
+  }
+  
+  .footer-div{
+    background-image: linear-gradient(-216deg, #3F3F3F 0%, #1E1E1E 100%);
+    color: white;
+    font-size: 12px;
+  }
+  
+  .social-media-icon{
+    display: inline-flex;
+  }
+  
+  .right-bg{
+    width: 100%;
+  }

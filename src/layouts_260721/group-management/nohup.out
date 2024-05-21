@@ -1,0 +1,5 @@
+
+> genesis-web-tool@1.0.0 start /home/apps/applications/gui-server/genesis-webtool
+> NODE_ENV=production node ./src/server.js
+
+Genesis listening at http://:::8189

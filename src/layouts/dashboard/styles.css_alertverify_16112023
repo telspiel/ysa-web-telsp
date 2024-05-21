@@ -1,0 +1,100 @@
+.chat-icon{
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    font-size: 60px;
+    color: #cb17b3;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.chat-box{
+    position: fixed;
+    right: 30px;
+    bottom: 100px;
+    width: 400px;
+    height: 78vh;
+    background: #e6cdf0;
+    z-index: 1000;
+    transition: all 0.3s ease-out;
+    transform: scaleY(0);
+}
+
+.chat-box.active{
+    transform: scaleY(1);
+
+}
+
+.hidden{
+    display: none !important;
+}
+
+.conv-form-wrapper textarea{
+    height: 20px;
+    overflow: hidden;
+    resize: none;
+}
+
+
+#messages{
+    padding: 20px;
+
+}
+
+/* alert-warning  */
+
+.alert{
+    position:fixed; 
+    top: 0px; 
+    left: 0px; 
+    width: 100%;
+    z-index:9999; 
+    border-radius:0px;
+    /* background-color: #f8d7da; */
+
+    background: linear-gradient(45deg, #e851a5, #7b2281);
+
+    /* color: #721c24; */
+
+    color: #fff;
+    border: 1px solid #f5c6cb;
+    padding: 15px;
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 20px; 
+     
+}
+
+/*blur full screen except alert*/
+
+.blur{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: #000000;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+/*make link gradient ADD GRADIENT*/
+.alert-link{
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 100%, rgba(252,176,69,1) 100%);
+    color: #fff;
+    padding: 3px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 3px; 
+}
+.alert-dismissible .close {
+    padding: 0 0.25rem !important;
+  }
+
+
+
+

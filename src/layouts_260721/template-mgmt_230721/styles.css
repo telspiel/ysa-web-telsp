@@ -1,0 +1,38 @@
+.controls-form button {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  width: 50%;
+}
+
+.table-pagination li a {
+  color: var(--primary-color);
+}
+
+#pagePrev, #pageNext {
+  display: none;
+}
+#misTable_filter,#misTable_info{
+display:none;
+}
+
+.deleteRow{
+  padding: 10px;
+    cursor: pointer;
+}
+#templatesTable_filter{
+display:none;
+}
+
+button.btn-small{
+  font-size: 14px;
+  padding: 10px 20px;
+}
+button#insertVar{
+margin-left: 0
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

@@ -1,0 +1,94 @@
+{{> sideNav this }}
+
+<!-- [ Main Content ] start -->
+<div class="pcoded-main-container ">
+  <div class="pcoded-content">
+    <!-- [ Main Content ] start -->
+    <div class="p-0 ">
+      <div class="p-0 contant-holder">
+        <!-- contant holder start -->
+        <h3 class="main-head-3">User Profile</h3>
+        <!-- contant holder end -->
+        <div class="col-md-12 pt-2 pb-5">
+          <!-- Nav tabs -->
+          <ul class="nav nav-tabs mb-3">
+            <li class="nav-item">
+              <a class="nav-link active" data-toggle="tab" href="#home">Profile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#menu1" id="list">Change Password</a>
+            </li>
+          </ul>
+
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div class="tab-pane active" id="home">
+              <div class="px-4 py-3">
+              <div class="user-detail-info col-md-12 py-4 m-auto">
+              <div id="view-user-form" class="user-form"></div>
+              </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="menu1">
+              <div class="frm-border">
+                <form id="controls-form">
+                  <div class="row">
+                    <div class="col-md-4 py-4 m-auto">
+                      <div class="form-group row">
+                        <label for="Password">Current Password</label>
+                        <input class="form-control" type="Password" id="oldPassword" name="oldPassword" required>
+                      </div>
+                      <div class="form-group row">
+                        <label for="newPassword">New Password</label>
+                        <input class="form-control" type="password" id="newPassword" name="newPassword"
+                             pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+                        </div>
+                        <div class="form-group row">
+                          <label for="confirmPassword">Confirm New Password</label>
+                          <input class="form-control" type="password" id="confirmPassword" name="confirmPassword"  required>
+                      </div>
+                      <div class="form-group row mt-4 pr-2">
+                        <button type="submit" id="" class="btn btn-primary mr-2">Submit</button>
+                        <button type="reset" id="cancelForm" class="btn btn-secondary">Cancel</button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+                <div class="col-md-4 py-4 m-auto">
+
+                    <div id="pswd_info">
+                        <h4>Password must meet the following requirements:</h4>
+                            <p id="letter" class="invalid">
+                              <i class="fa fa-times" aria-hidden="true"></i> At least <strong>one letter</strong></p>
+                            <p id="capital" class="invalid">
+                              <i class="fa fa-times" aria-hidden="true"></i> At least <strong>one capital letter</strong></p>
+                            <p id="number" class="invalid">
+                              <i class="fa fa-times" aria-hidden="true"></i> At least <strong>one number</strong></p>
+                              <p id="specialChar" class="invalid">
+                                <i class="fa fa-times" aria-hidden="true"></i> Be at least <strong>special characters</strong></p>
+                            <p id="length" class="invalid">
+                              <i class="fa fa-times" aria-hidden="true"></i> Be at least <strong>8 characters</strong></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-div">
+    <span class="copy float-left">
+      <p id="demo"></p> &copy; All Rights Reserved
+    </span>
+    <span class="float-right">
+      <ul class="social-media-icon">
+        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
+      </ul>
+    </span>
+  </div>
+</div>

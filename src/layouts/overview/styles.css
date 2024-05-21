@@ -1,0 +1,31 @@
+#overview-form {
+  width: 80%;
+  padding: 20px 0 0 50px;
+}
+
+#fileUpload {
+  float: right;
+}
+
+.scheduleMsgFields {
+  display: flex;
+  justify-content: space-between;
+}
+
+.scheduleMsgFields > input {
+  width: 20%;
+}
+
+.removeRow {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.charCount {
+  float: right;
+  display: none;
+}
+
+#saveBulkUpload {
+  width: 20%;
+}

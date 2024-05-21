@@ -1,0 +1,9 @@
+<div class="form-group row">
+  <label for="{{ id }}" class="col-sm-3 col-form-label">{{ label }}</label>
+  <div class="col-sm-9">
+    <select class="form-control" id="{{ id }}" name="{{ name }}" title="{{ title }}" {{#if disabled}} disabled{{/if}}
+      {{#if readonly}} readonly{{/if}}> {{#each options}} <option value="{{ value }}">{{ label }}</option>
+      {{/each}}
+    </select>
+  </div>
+</div>

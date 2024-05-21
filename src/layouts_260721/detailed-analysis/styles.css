@@ -1,0 +1,41 @@
+.controls-form button {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  width: 50%;
+}
+
+.table-pagination li a {
+  color: var(--primary-color);
+}
+
+#pagePrev, #pageNext {
+  display: none;
+}
+
+#misDetailedReport_length,#misDetailedReport_filter,#misDetailedReport_paginate,#misDetailedReport_info,#misTable_info,#misTable_paginate{
+display:none;
+}
+
+#misTable_filter,#misTable_length{
+display:none;
+}
+
+.paginationNav{
+text-align:center;
+}
+
+.popover-header{
+margin-top:0px;
+font-size:1.2em;
+}
+
+.popover.fade.show{
+opacity:1;
+}
+
+.popover .popover-body{
+word-wrap: break-word;
+}
+#report_donwload{
+  color:white;
+}

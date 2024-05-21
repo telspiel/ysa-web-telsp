@@ -1,0 +1,77 @@
+{{!-- Background --}}
+
+
+<div class="bg">
+<div class="content" style="display:none">
+<div id="particle">   
+
+{{!-- <form id="login-form" data-tilt data-tilt-speed="500" data-tilt-perspective="900"> --}}
+    <form id="login-form">
+    <div class="card login-form">
+      <h1 class="login-text rainbow">LOGIN</h1>
+      {{!-- h1 class with login-text class with each letter in different color --}}
+      
+
+      <div class="form-group">
+        {{!-- <label for="exampleInputEmail1">Username</label> --}}
+        <input type="text" id="userId" class="form-control form-control-sm" required  placeholder="Your Username">
+      </div>
+      <div class="form-group">
+        {{!-- <label for="exampleInputPassword1">Password</label> --}}
+
+        <input type="password" class="form-control form-control-sm" required id="userPass" placeholder="Your Password">
+        <span toggle="#userPass" class="feather icon-eye field-icon toggle-password"></span>
+      </div>
+
+      <label>
+        <div class="rainbow"> <input type="checkbox" id="rememberMe" class="checkbox"> <span></span> Remember Me </div>
+      </label>
+
+
+
+      <button id="login-btn" type="submit" class="btn btn-md btn-primary login-btn"><i class="feather icon-log-in">
+        </i>Sign in</button>
+    </div>
+    
+  </form>
+  
+    {{!-- <img src="images\holi.gif" style="margin-top:200px;  width:200px;" alt="Holi">
+    
+   <div>
+      <img src="images\holi.gif" style="float: right; width:200px; margin-top:-200px;" alt="Holi">
+    </div> --}}
+    <div class="holi-images">
+          <img src="images\holi.gif" alt="Holi">
+          <img src="images\holi.gif" alt="Holi">
+    </div>
+    
+<div class="footer">
+    <span class="copy float-left">
+      <p class="rights" style="color:aliceblue">© 2022 telSpiel Communications Pvt. Ltd. | All Rights Reserved </p>
+    </span>
+    
+      {{!-- <p style="color:aliceblue">Follow Us : </p>&nbsp;
+      <div class="social-media-icon">
+        <a href="https://www.facebook.com/telspiel" target="_blank"><i class="fa fa-facebook"
+              aria-hidden="true"></i></a>
+        <a href="https://twitter.com/TelSpiel" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+        
+        <a href="https://www.linkedin.com/company/telspiel" target="_blank"><i class="fa fa-linkedin"
+              aria-hidden="true"></i></a>
+        <a href="https://www.youtube.com/channel/UCJNJb4iAloNSN-f2J41X8Jw" target="_blank"><i class="fa fa-youtube"
+              aria-hidden="true"></i></a>
+      </div> --}}
+      <div class="float-right">
+      {{!-- <a href="/terms_conditions"><u>Terms & Conditions</u></a> --}}
+      <a href="terms_conditions.pdf" target="_blank"><u>Terms & Conditions</u></a>
+      {{!-- <a href="terms_conditions.pdf" target="_blank"><u>Information Security Policy</u></a> --}}
+      </div>
+
+    
+</div>
+
+</div>
+
+</div>
+
+</div>

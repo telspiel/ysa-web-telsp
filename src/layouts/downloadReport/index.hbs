@@ -1,0 +1,58 @@
+{{> sideNav }}
+
+<!-- [ Main Content ] start -->
+<div class="pcoded-main-container">
+  <div class="pcoded-content">
+    <!-- [ Main Content ] start -->
+    <div class="p-0">
+      <div class="p-0 contant-holder">
+        <!-- contant holder start -->
+        <h3 class="main-head-3">Download Report</h3>
+        <!-- contant holder end -->
+        <div class="col-md-12 pt-2 pb-5">
+
+          <form id="controls-form">
+
+            <div class="frm-border">
+              <div class="row">
+                <div class="col-md-2">
+                  <div class="form-group">
+                    <label for="txt-from">From</label>
+                    <input type="text" class="form-control downloadReportDate" id="fromDate" required>
+                  </div>
+                </div>
+                <div class="col-md-2">
+                  <div class="form-group">
+                    <label for="txt-from">To</label>
+                    <input type="text" class="form-control downloadReportDate" id="toDate" required>
+                  </div>
+                </div>
+                <div class="col-md-3" id="campaignNameDiv">
+                  <div class=" campaignNameDiv">
+                    <label for="campaignName">Campaign Name</label>
+                    <select type="text" class="form-control select2 dropdown campaignName" name="campaignName">
+                      <option value="" id="campaignName" class="campaignName">ALL</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-2">
+                  <div class="form-group mt-4 pt-1">
+                    <input type="hidden" id="pageNumber" value="1" />
+                    <input type="hidden" id="totalPages" value="1" />
+                    <button type="submit" class="btn btn-primary">Download</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+          <table id="misTable" class="table table-striped table-bordered" style="width:100%">
+            <ul id="misPagination" class="pagination float-right table-pagination">
+              <li class="page-item"><a class="page-link" id="pagePrev" href="#">Previous</a></li>
+              <li class="page-item"><a class="page-link" id="pageNext" href="#">Next</a></li>
+            </ul>
+            {{> mainLoader }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

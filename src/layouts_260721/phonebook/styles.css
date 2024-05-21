@@ -1,0 +1,61 @@
+.controls-form button {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  width: 50%;
+}
+
+.table-pagination li a {
+  color: var(--primary-color);
+}
+
+/* #pagePrev, #pageNext {
+  display: none;
+} */
+#misTable_filter,#misTable_info{
+display:none;
+}
+#searchTable_filter.dataTables_filter{
+  display: block;
+}
+
+.dt-button.btn.btn-danger:hover{
+  color: #fff !important;
+  background-color: #ff2d50 !important;
+  border-color: #ff2046 !important;
+}
+.dt-button.btn.btn-danger{
+  color: #fff !important;
+  background-color: #FF5370 !important;
+  border-color: #FF5370 !important;
+  background: #FF5370 !important;
+}
+
+.dt-button.btn.btn-info{
+  color: #fff !important;
+  background-color: #00bcd4 !important;
+  border-color: #00bcd4 !important;
+  background: #00bcd4 !important;
+}
+.dt-button.btn {
+
+  display: inline-block;
+    font-weight: 400;
+    color: #222;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.95rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    border-radius: 2px;
+    -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+table.dataTable.table-sm>thead>tr>th{
+  padding-right: 29px !important;
+}

@@ -1,0 +1,436 @@
+{{> sideNav this }}
+
+<!-- [ Main Content ] start -->
+<div class="pcoded-main-container">
+  <div class="pcoded-content">
+    <!-- [ Main Content ] start -->
+    <div class="p-0">
+      <div class="p-0 contant-holder">
+        <!-- contant holder start -->
+        <h3 class="main-head-3">Bulk Message</h3>
+        <!-- contant holder end -->
+        <div class="col-md-12 m-auto pt-2 pb-5">
+
+          <div class="col-md-10 m-auto ">
+            <div class="frm-border">
+              <div id="bulk-upload-form">
+                <form id="bulk-upload" action="#" method="post" autocomplete="off">
+                  <div class="form-group row">
+                    <label for="campaignName" class="col-md-4 col-form-label">Campaign Name</label>
+                    <div class="col-md-6">
+                      <input type="text" class="form-control" id="campaignName" name="campaignName" value=""
+                        span="Enter Campaign Name" placeholder="Campaign Name">
+                      <span class="txt-center">Note : Special characters are not allowed in campaign name like SPACE , [
+                        ] { } | \ ; : " ' <> . ? / ~ `</span>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="fileType-0" class="col-md-4 col-form-label">File Type</label>
+                    <div class="col-md-6 mt-2">
+                      <div class="custom-control custom-radio">
+                        <input class="custom-control-input" type="radio" name="fileType" value="txt" id="fileType-0"
+                          title="Select File Type" checked="checked"> <label class="custom-control-label"
+                          for="fileType-0">Txt</label>
+                      </div>
+                      <div class="custom-control custom-radio">
+                        <input class="custom-control-input" type="radio" name="fileType" value="xlsx" id="fileType-1"
+                          title="Select File Type">
+                        <label class="custom-control-label" for="fileType-1">Xlsx</label>
+                      </div>
+                      <div class="custom-control custom-radio">
+                        <input class="custom-control-input" type="radio" name="fileType" value="xls" id="fileType-2"
+                          title="Select File Type">
+                        <label class="custom-control-label" for="fileType-2">Xls</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="selectFile" class="col-md-4 col-form-label">Select File</label>
+                    <div class="col-md-6">
+                      <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="selectFile" name="selectFile" required
+                          accept=".csv, .txt, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel">
+                        <label class="custom-file-label" for="customFile">Choose file</label>
+                      </div>
+                      <span class="txt-center"><span id="totalMobile">0</span> Mobile Numbers | </span><small>Note :
+                        .txt,.xls,.xlsx are the allowed file types</small>
+                    </div>
+                    <div class="col-md-2">
+                      <button type="button" id="fileUpload" class="btn btn-primary">Upload</button>
+                    </div>
+                  </div>
+                  <div class="row form-group">
+                    <div class="col-md-4">
+                      <label for="MessageType">Message Type </label>
+                    </div>
+                    <div class="col-md-8 ">
+                      <div class="col-md-3 custom-control custom-radio">
+                        <input class="custom-control-input messagetype" type="radio" name="serviceType" value="trans"
+                          id="messType-0" title="Message Type" checked="checked"> <label class="custom-control-label"
+                          for="messType-0">Transactional</label>
+                      </div>
+                      <div class=" col-md-3 custom-control custom-radio ">
+                        <input class="custom-control-input messagetype" type="radio" name="serviceType" value="promo"
+                          id="messType-1" title="Message Type">
+                        <label class="custom-control-label" for="messType-1">Promotional</label>
+                      </div>
+                      <div class=" col-md-2 custom-control custom-radio ">
+                        <input class="custom-control-input messagetype" type="radio" name="serviceType" value="service"
+                          id="messType-2" title="Message Type"> <label class="custom-control-label"
+                          for="messType-2">Service</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row form-group service_type d-none ">
+                    <div class="col-md-4">
+                    </div>
+                    <div class="col-md-6 ">
+                      <div class="col-md-3 custom-control custom-radio">
+                        <input class="custom-control-input " type="radio" name="serviceSubType" value="service-implicit"
+                          id="serType-0" title="Service type" checked="checked"> <label class="custom-control-label"
+                          for="serType-0">Service Implicit</label>
+                      </div>
+                      <div class="col-md-3 custom-control custom-radio ">
+                        <input class="custom-control-input" type="radio" name="serviceSubType" value="service-explicit"
+                          id="serType-1" title="Service type">
+                        <label class="custom-control-label" for="serType-1">Service Explicit</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group row" id="senderIdSelectDiv">
+                    <label for="senderId" class="col-md-4 col-form-label">Sender Id</label>
+                    <div class="col-md-6">
+                      <select class="form-control custom-select senderIdSelect" name="senderId" id="senderIdSelect"
+                        aria-label="Sender Id" aria-describedby="mobile-addon" required>
+                        <option disabled selected value="">-- Select --</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row form-group">
+                    <div class="col-md-4">
+                      <label for="templatename" class="col-form-label">Content Template Name </label>
+                    </div>
+                    <div class="col-md-6">
+                      <select class="custom-select" id="templatename" name="contentTemplateId" title="Template Name"
+                        onfocus='this.size=5;' onblur='this.size=1;' onchange='this.size=1; this.blur();'>
+                        <option selected value="">-- Select --</option>
+                      </select>
+                      <span class="displayTemplateTextSpan d-none"><small><b>Template Text : </b></small><small
+                          id="displayTemplateText"></small></span>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="msgType-0" class="col-md-4 col-form-label">Message Encoding</label>
+                    <div class="col-md-8">
+                      <div class="custom-control custom-radio">
+                        <input class="custom-control-input" type="radio" name="msgType" value="plain" id="msgType-0"
+                          title="Select Message Type" checked="checked">
+                        <label class="custom-control-label" for="msgType-0">Plain Text</label>
+                      </div>
+                      <div class="custom-control custom-radio">
+                        <input class="custom-control-input" type="radio" name="msgType" value="unicode" id="msgType-1"
+                          title="Select Message Type">
+                        <label class="custom-control-label" for="msgType-1">Unicode</label>
+                      </div>
+                      <div class="custom-control custom-radio">
+                        <input class="custom-control-input" type="radio" name="msgType" value="FL" id="msgType-2"
+                          title="Select Message Type"> <label class="custom-control-label" for="msgType-2">Flash</label>
+                      </div>
+                      <div class="custom-control custom-radio">
+                        <input class="custom-control-input" type="radio" name="msgType" value="FU" id="msgType-3"
+                          title="Select Message Type">
+                        <label class="custom-control-label" for="msgType-3">Flash Unicode</label>
+                      </div>
+
+
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <label for="msgPart-0" class="col-md-4 col-form-label">Message Part</label>
+                    <div class="col-md-6 mt-2">
+                      <div class="custom-control custom-radio">
+                        <input class="custom-control-input" type="radio" name="msgPart" value="single" id="msgPart-0"
+                          title="Select Message Part" checked="checked">
+                        <label class="custom-control-label" for="msgPart-0">Singlepart</label>
+                      </div>
+                      <div class="custom-control custom-radio">
+                        <input class="custom-control-input" type="radio" name="msgPart" value="multi" id="msgPart-1"
+                          title="Select Message Part">
+                        <label class="custom-control-label" for="msgPart-1">Multipart</label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row form-group">
+                    <div class="col-md-4"><label>Convertion Text</label></div>
+                    <div id='translControl' class="col-md-6">
+                      <input type="checkbox" id="checkboxId" onclick="javascript:checkboxClickHandler()"></input>
+                      Type in <select id="languageDropDown" onchange="javascript:languageChangeHandler()"></select>
+                    </div>
+                  </div>
+                  <div class="row form-group">
+                    <div class="col-md-4"><label for="msgText">Message Text</label></div>
+                    <div id='translControl' class="col-md-6">
+                      <textarea id="msgText" rows="3" class="form-control" placeholder="Original Message Text"
+                        name="msgText" required></textarea>
+
+                      <small id="shortURLNote">
+                        <span id="charCount">0 characters</span> | <span id="smsCr">0</span>
+                          SMS
+                          Credit<br /><b><i>Note: xxxxxx will be replaced by actual shortcode up to 6
+                            chars.</i></b></small>
+                    </div>
+                  </div>
+                  <div id="isShortUrlVisual">
+                    <div class="row form-group quick-message">
+                      <div class="col-md-4"><label for="campaign_name">Is ShortUrl Selected</label></div>
+                      <div class="col-md-6 mt-2">
+                        <div class="custom-control custom-radio">
+                          <input class="custom-control-input isShortUrlSelectedInput" type="radio"
+                            name="isShortUrlSelected" value="Y" id="isShortUrlSelected-0"
+                            title="Select isShortUrlSelected"> <label class="custom-control-label"
+                            for="isShortUrlSelected-0">Yes</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                          <input class="custom-control-input isShortUrlSelectedInput" type="radio"
+                            name="isShortUrlSelected" value="N" id="isShortUrlSelected-1"
+                            title="Select isShortUrlSelected" checked="checked">
+                          <label class="custom-control-label" for="isShortUrlSelected-1">No</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-none" id="short_url">
+                      <div class="row form-group quick-message">
+                        <div class="col-md-4"><label for="shortUrlName">Short Url Name</label></div>
+                        <div class="col-md-6">
+                          {{!-- <select class="form-control" id="shortUrlName" name="shortUrlName"
+                            aria-label="Sender Id" aria-describedby="mobile-addon">
+                            <option readonly selected value="">-- Select --</option>
+                          </select> --}}
+                          <select class="form-control js-states" id="shortUrlName" name="shortUrlName"
+                            aria-label="Sender Id" aria-describedby="mobile-addon" multiple style="width: 100%;">
+                            <option disabled="disabled">-- Select --</option>
+                          </select>
+                          <small id="staticUrlNote" class="d-none"><b>You have selected a Static Short URL.</b></small>
+                          <small id="dynamicUrlNote" class="d-none"><b>You have selected a Dynamic Short
+                              URL.</b></small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="row form-group quick-message">
+                    <div class="col-md-4"><label for="entityId">Entity ID</label></div>
+                    <div class="col-md-6"><input type="number" class="form-control" id="entityId" name="entityId"
+                        value="" title="Entity ID" placeholder="Entity Id" pattern="[0-9]"></div>
+                  </div>
+
+                  <div class="row form-group quick-message">
+                    <div class="col-md-4"><label for="operatorTemplateId">Operator Template ID</label></div>
+                    <div class="col-md-6"><input type="text" class="form-control" id="dltTemplateId"
+                        name="dltTemplateId" value="" title="Operator Template ID" placeholder="Operator Template Id"
+                        pattern="[a-zA-Z0-9]+"></div>
+                  </div>
+
+                  <div class="form-group row">
+                    <label for="scheduleMessage-0" class="col-md-4 col-form-label">Schedule Message</label>
+                    <div class="col-md-6 mt-2">
+                      <div class="custom-control custom-radio">
+                        <input class="custom-control-input" type="radio" name="scheduleMessage" value="yes"
+                          id="scheduleMessage-0" title="Schedule Message"> <label class="custom-control-label"
+                          for="scheduleMessage-0">Yes</label>
+                      </div>
+                      <div class="custom-control custom-radio">
+                        <input class="custom-control-input" type="radio" name="scheduleMessage" value="no"
+                          id="scheduleMessage-1" title="Schedule Message" checked="checked">
+                        <label class="custom-control-label" for="scheduleMessage-1">No</label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="d-none" id="schd_msg">
+                    <div class="form-group row scheduleDateGroup hidden">
+                      <label for="senderId" class="col-md-4 col-form-label">Schedule Date</label>
+                      <div class="col-md-6">
+                        <input placeholder="From Date & Time" class="form-control datetimepicker" id="scheduleDateTime"
+                          type="text" name="scheduleDateTime" />
+                      </div>
+                    </div>
+                    <div class="form-group row hidden d-none" id="schd_msg_div">
+                      <label for="senderId" class="col-md-4 col-form-label">Schedule Date</label>
+                      <div class="col-md-6">
+                        <input placeholder="From Date &amp; Time" class="form-control datepicker" id="scheduleDate"
+                          name="scheduleDate" type="text" readonly="readonly">
+                      </div>
+                    </div>
+                    <div class="form-group row splitFileGroup hidden">
+                      <label for="splitFile-0" class="col-md-4 col-form-label">Split File</label>
+                      <div class="col-md-6 mt-2">
+                        <div class="custom-control custom-radio">
+                          <input class="custom-control-input" type="radio" name="splitFile" value="yes" id="splitFile-0"
+                            title="Split File"> <label class="custom-control-label" for="splitFile-0">Yes</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                          <input class="custom-control-input" type="radio" name="splitFile" value="no" id="splitFile-1"
+                            title="Split File" checked="checked">
+                          <label class="custom-control-label" for="splitFile-1">No</label>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div id="scheduleMsgFieldsGroup" class="d-none">
+                      <div class="form-group row">
+                        <label for="scheduleMessage" class="col-md-4 col-form-label"></label>
+                        <div class="col-md-6">
+                          <div class="row">
+                            <div class="col-3 pr-0"><input type="number" min="1" max="5000000"
+                                name="scheduleMessageFrom" id="scheduleMessageFrom" class="form-control"
+                                placeholder="From"></div>
+                            <div class="col-3 pr-0"><input type="number" min="1" max="5000000" name="scheduleMessageTo"
+                                id="scheduleMessageTo" class="form-control" placeholder="To"></div>
+                            <div class="col-3 pr-0"><select name="hour" id="hour" class="form-control hour"></select>
+                            </div>
+                            <div class="col-1 pt-1">&nbsp;<b style="font-size: 20px;">:</b>&nbsp;</div>
+                            <div class="col-2 p-0"><select name="min" id="min" class="form-control min"></select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-2">
+                          <button type="button" id="addMoreRows" class="btn btn-primary float-right"><i
+                              class="fa fa-plus" aria-hidden="true"></i>&ensp;Add Rows</button>
+                        </div>
+                      </div>
+                      <div class="add_split_row"></div>
+                    </div>
+                  </div>
+
+                  <div class="form-group text-center mt-5 mb-4">
+                    <button id="btnSubmit" class="btn btn-primary btn-form"><i
+                        class="feather save icon-save float-left mt-1"></i>&ensp;Submit</button>
+                    <button type="reset" id="btnCancel" class="btn btn-secondary btn-form"><i
+                        class="feather x-square icon-x-square float-left mt-1"></i>&ensp;Cancel</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-div">
+      <span class="copy float-left">
+        <p id="demo"></p> &copy; All Rights Reserved
+      </span>
+      <span class="float-right">
+        <ul class="social-media-icon">
+          <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
+        </ul>
+      </span>
+    </div>
+  </div>
+  {{> mainLoader }}
+
+  <!-- [ Main Content ] end -->
+
+
+  <div class="modal fade" id="messageModal" tabindex="-1" role="dialog" aria-labelledby="messageModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Confirm Request</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-sm-4"><b>Sender</b></div>
+            <div class="col-sm-8"><span id="sender">{{name}}</span></div>
+          </div>
+          <br />
+          <div class="row">
+            <div class="col-sm-4"><b>Message</b></div>
+            <div class="col-sm-8"><span id="modelMessage" style="white-space: pre-wrap;"></span></div>
+          </div>
+          <br />
+          <div class="row">
+            <div class="col-sm-4"><b>Character Count</b></div>
+            <div class="col-sm-8"><span id="modelCharCount"></span> Characters</div>
+          </div>
+          <br />
+          <div class="row">
+            <div class="col-sm-4"><b>SMS Credit</b></div>
+            <div class="col-sm-8"><span id="modelSmsCr"></span> SMS Credit(s)</div>
+          </div>
+          <br />
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary" id="sendNow">Send Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Modal -->
+  <div id="translationModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Translation Feature</h5>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group row">
+            <label for="targetLanguage" class="col-md-3 col-form-label">Message Language</label>
+            <div class="col-md-3">
+              <select class="form-control" name="targetLanguage" id="targetLanguage" aria-label="Sender Id"
+                aria-describedby="mobile-addon">
+                <option value="ar">Arabic</option>
+                <option value="bn">Bengali</option>
+                <option value="gu">Gujarati</option>
+                <option value="hi">Hindi</option>
+                <option value="ml">Malayalam</option>
+                <option value="ne">Nepali</option>
+                <option value="ta">Tamil</option>
+                <option value="te">Telugu</option>
+                <option value="ur">Urdu</option>
+                {{!-- <option value="en">English</option> --}}
+              </select>
+            </div>
+          </div>
+
+          <div class="row form-group">
+            <div class="col-md-5"><label for="convOriginalText">Message Text</label></div>
+            <div class="col-md-2"><label></label></div>
+            <div class="col-md-5"><label>Converted Text</label></div>
+            <div class="col-md-5">
+              <textarea name="convOriginalText" id="convOriginalText" rows="3" class="form-control"
+                placeholder="Original Message Text"></textarea>
+            </div>
+            <div class="col-md-2 form-group mb-4 mt-5">
+              <button type="button" id="convertBtn" class="convertBtn btn btn-primary">
+                <i class="fa fa-exchange" aria-hidden="true"></i>&ensp;Convert</button>
+            </div>
+            <div class="col-md-5">
+              <textarea name="convOriginalText" id="convertedText" rows="3" class="form-control"
+                placeholder="Original Message Text" readonly></textarea>
+            </div>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal" id="cpyClose">Copy & Close</button>
+        </div>
+      </div>
+    </div>
+  </div>

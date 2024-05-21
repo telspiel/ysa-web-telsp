@@ -1,0 +1,192 @@
+{{> sideNav }}
+<!-- [ Main Content ] start -->
+<div class="pcoded-main-container">
+  <div class="pcoded-content">
+    <!-- [ Main Content ] start -->
+    <div class="p-0">
+      <div class="p-0 contant-holder">
+        <!-- contant holder start -->
+        <h3 class="main-head-3">Phone Book</h3>
+        <!-- contant holder end -->
+        <div class="col-md-12 pt-2 pb-5">
+
+          <main class="px-4 py-3">
+            <div id="alert-box" class="alert-box"></div>
+            <nav>
+              <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                <a class="nav-item nav-link active show" id="add-contact-tab" data-toggle="tab" href="#add" role="tab"
+                  aria-controls="add" aria-selected="false">Add</a>
+                <a class="nav-item nav-link" id="upload-contacts-tab" data-toggle="tab" href="#upload" role="tab"
+                  aria-controls="view" aria-selected="false">Upload Contacts</a>
+              </div>
+            </nav>
+
+            <div class="tab-content" id="nav-tabContent">
+              <div class="tab-pane fade active show in" id="add" role="tabpanel" aria-labelledby="nav-home-tab">
+                <br>
+                <div class="frm-border">
+                  <h5 class="mb-3">Add New Contacts</h5>
+                  <form id="add-contact-form">
+                    <div class="row">
+                      <div class="col-md-3">
+                        <div class="form-group">
+                          <label for="txt-from">Group</label>
+                          <select class="form-control groupList" id="groupList" name="groupName" required=""
+                            autocomplete="off">
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="form-group">
+                          <label for="txt-from">Name</label>
+                          <input type="text" class="form-control" id="contactName" name="contactName" placeholder="Name"
+                            required="" autocomplete="off" />
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="form-group">
+                          <label for="txt-from">Mobile</label>
+
+                          <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text" id="basic-addon1">91</span>
+                            </div>
+                            <input type="text" class="form-control" id="contactNumber" name="contactNumber"
+                              title="Enter Mobile Number." placeholder="Mobile Number" required="" autocomplete="off"
+                              pattern="^[0-9]{10}$" aria-describedby="basic-addon1" maxlength="10" />
+                          </div>
+
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="form-group mt-4 pt-1">
+                          {{!-- <input type="submit" value="Add Contact" class="btn btn-primary"> --}}
+                          <button type="submit" class="btn btn-primary">Add Contact</button>
+
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="">
+                  {{!-- <b>Search Contacts</b> --}}
+                  <h5 class="mb-3">Search Contacts</h5>
+                  <form id="searchContact">
+                    <div class="row">
+
+                      <div class="col-md-3">
+                        <div class="form-group">
+                          <label for="txt-from">Select Group</label>
+                          <select class="form-control" id="groupList1" name="groupName" required="" autocomplete="off">
+                            <option selected value="0" id="0">-- Select Group--</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="form-group">
+                          <label for="txt-from">Mobile Number</label>
+                          <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text" id="basic-addon1">91</span>
+                            </div>
+                            <input type="text" class="form-control" id="contactNumb" name="contactNumber"
+                              title="Enter Mobile Number." placeholder="Mobile Number"  autocomplete="off"
+                              pattern="^[0-9]{10}$" aria-describedby="basic-addon1" maxlength="10" />
+                          </div>
+
+                          {{!-- <input type="text" class="form-control" id="contactNumb" name="contactNumber"
+                            title="Enter Mobile Number." placeholder="Mobile Number" required autocomplete="off"
+                            pattern="^[0-9]{10}$" /> --}}
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group d-flex mt-4 pt-1">
+                          <input type="hidden" id="pageNumber" value="1" />
+                          <input type="hidden" id="totalPages" value="1" />
+                          <button type="submit" id="searchBtn" class="btn btn-primary" value="submit">Search</button>
+                          <button type="button" id="AllContact" class="btn btn-primary ml-1" value="getAllNumber">All
+                            Contact</button>
+                            <button class="btn btn-primary ml-1 " id="donwloadFileButton" ></button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="float-left" id="dwnloadBtn" style="padding-right: 10px;">
+                </div>
+                <table class="table table-striped table-sm table-bordered dt-responsive nowrap" id="searchTable">
+                </table>
+                <div class="tablePageNavi text-center">
+                  <ul id="misPagination" class="pagination table-pagination">
+                    <li class="page-item"><a class="page-link" id="pagePrev" href="#">Previous</a></li>
+                    <li class="page-item"><a class="page-link" id="pageNext" href="#">Next</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="tab-pane fade" id="upload" role="tabpanel" aria-labelledby="nav-profile-tab">
+                <br>
+                {{!-- <div class="frm-border">
+                  <small>
+                    * you can upload any .txt or .csv file which carry the information in the following text format :-
+                    <br>
+                    <b>Mobile Number, Name</b><br>
+                     919998......, Abhay<br>
+                     8435......, Sanjay<br>
+                     <b>Note -</b> Mobile number can be uploaded with or without 91<br>
+                  </small>
+                </div> --}}
+                <form id="upload-contacts" action="#" method="post" autocomplete="off">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <div class="form-group">
+                        <label for="uploadGroupList" class="">Select Group</label>
+                        <select class="form-control" id="uploadGroupList" name="uploadGroupList" required=""
+                          autocomplete="off">
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-group">
+                        <label for="orgName" class="">File</label>
+                        <div class="custom-file">
+                          <input type="file" class="custom-file-input" id="selectFile" name="files"
+                            accept=".csv, .txt, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel">
+                          <label class="custom-file-label" for="customFile">Choose file</label>
+                        </div>
+                        <small>Note : Only .txt/.csv allowed</small>
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="form-group d-flex mt-4 pt-1">
+                        <button type="submit" id="uploadBtn" class="btn btn-primary" value="submit">Upload</button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+
+              </div>
+          </main>
+
+          {{> mainLoader }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-div">
+    <span class="copy float-left">
+      <p id="demo"></p> &copy; All Rights Reserved
+    </span>
+    <span class="float-right">
+      <ul class="social-media-icon">
+        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
+      </ul>
+    </span>
+  </div>
+
+</div>

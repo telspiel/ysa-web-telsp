@@ -1,0 +1,215 @@
+{{> sideNav this }}
+
+<!-- [ Main Content ] start -->
+<div class="pcoded-main-container">
+  <div class="pcoded-content">
+    <!-- [ Main Content ] start -->
+    <div class="p-0">
+      <div class="p-0 contant-holder">
+        <!-- contant holder start -->
+        <h3 class="main-head-3">New Short URL</h3>
+        <!-- contant holder end -->
+        <div class="col-md-12 pt-2 pb-5">
+          <!-- Nav tabs -->
+          <ul class="nav nav-tabs mb-4">
+            <li class="nav-item">
+              <a class="nav-link active" data-toggle="tab" href="#home">Create</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#view-tab" id="view">View</a>
+            </li>
+          </ul>
+
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div class="tab-pane active col-md-8 m-auto pt-2 pb-5" id="home">
+              <div class="frm-border">
+                <form id="addShortUrl" action="#" method="post" autocomplete="off">
+                  <div class="form-group row">
+                    <label for="name" class="col-md-4 col-form-label">Name</label>
+                    <div class="col-md-6">
+                      <input type="text" class="form-control" id="name" name="name" value="" title="Enter Name"
+                        placeholder="Name" required="true">
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <label for="isActive-0" class="col-md-4 col-form-label">Is Active</label>
+                    <div class="col-md-8">
+                      <div class="custom-control custom-radio">
+                        <input class="custom-control-input" type="radio" name="isActive" id="isActive-0" title=""
+                          value="Y" checked>
+                        <label class="custom-control-label" for="isActive-0">Yes</label>
+                      </div>
+                      <div class="custom-control custom-radio">
+                        <input class="custom-control-input" type="radio" name="isActive" id="isActive-1" title=""
+                          value="N">
+                        <label class="custom-control-label" for="isActive-1">No</label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <label for="isDynamic-0" class="col-md-4 col-form-label">Is Dynamic</label>
+                    <div class="col-md-8">
+                      <div class="custom-control custom-radio">
+                        <input class="custom-control-input" type="radio" name="isDynamic" id="isDynamic-0" title=""
+                          value="Y">
+                        <label class="custom-control-label" for="isDynamic-0">Yes</label>
+                      </div>
+                      <div class="custom-control custom-radio">
+                        <input class="custom-control-input" type="radio" name="isDynamic" id="isDynamic-1" title=""
+                          checked value="N">
+                        <label class="custom-control-label" for="isDynamic-1">No</label>
+                      </div>
+                      <br />
+                      <small>if is dynamic is selected different short url will be sent on each number</small>
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <label for="domain" class="col-md-4 col-form-label">Select Domain</label>
+                    <div class="col-md-6">
+                      <select type="text" class="form-control" id="domain" name="domainName">
+                        {{!-- <option value="gmly.in" selected>gmly.in</option> --}}
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <label for="longUrl" class="col-md-4 col-form-label">Long URL</label>
+                    <div class="col-md-3">
+                      <select type="text" class="form-control" id="domainUrl">
+                        <option value="http://">http://</option>
+                        <option value="https://">https://</option>
+                      </select>
+                    </div>
+                    <div class="col-md-5">
+                      <textarea class="form-control" id="longUrl" name="longUrl" value="" placeholder="Enter Long URL"
+                        required=""></textarea>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <label for="callBackDomainUrl" class="col-md-4 col-form-label">Callback URL</label>
+                    <div class="col-md-3">
+                      <select type="text" class="form-control" id="callBackDomainUrl">
+                        <option value="http://">http://</option>
+                        <option value="https://">https://</option>
+                      </select>
+                    </div>
+                    <div class="col-md-5">
+                      <textarea class="form-control" id="callbackUrl" name="callbackUrl" value=""
+                        placeholder="Enter Callback URL"></textarea>
+                    </div>
+
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-md-4 col-form-label"></label>
+                    <label class="col-md-8 col-form-label" style="line-break: anywhere;"><small><b>Sample URL :
+                        </b>google.com?mobile=%MOBILE%&camp=%CAMPAIGN_NAME%&rectime=%RECTIME%&circle=%CIRCLE%&operator=%OPERATOR%</small></label>
+                  </div>
+
+                  <div class="form-group row">
+                    <label for="shortUrlCode" class="col-md-4 col-form-label">Short URL Code</label>
+                    <div class="col-md-8">
+                      <div class="row">
+                        <div class="col-md-9">
+                          <input type="text" class="form-control" id="shortUrlCode" name="shortUrlCode" value=""
+                            title="Enter Short URL Code" placeholder="Short URL Code" disabled="true">
+                        </div>
+                      </div>
+                      <small>Short URL code will be generated only after hitting submit button</small>
+                    </div>
+
+
+                  </div>
+
+                  <div class="text-center mt-2 mb-2">
+                    <button type="submit" id="saveBtn" class="btn btn-primary btn-form">Save </button>
+                    <button type="reset" id="cancelForm" class="btn btn-secondary btn-form">Reset</button>
+                  </div>
+              </div>
+              </form>
+            </div>
+            <div class="tab-pane fade" id="view-tab">
+              <table class="table table-striped table-sm table-bordered dt-responsive nowrap" id="listShortUrl"
+                style="width:100%">
+
+              </table>
+              {{!-- <div class="tab-pane active col-md-8 m-auto pt-2 pb-5">
+                <div class="frm-border">
+                  <div id="ViewShortUrl" action="#" method="post" autocomplete="off">
+                    <div class="form-group row">
+                      <label for="viewUrlName" class="col-md-4 col-form-label">Name</label>
+                      <div class="col-md-6">
+                        <input type="text" class="form-control" id="viewUrlName" name="viewUrlName" value=""
+                          title="Enter Name" placeholder="Name" required="true">
+                      </div>
+                    </div>
+                    <div class="text-center mt-2 mb-2">
+                      <button type="reset" id="cancelForm" class="btn btn-danger btn-form">Reset</button>
+                    </div>
+                    </form>
+                  </div>
+                </div>
+              </div> --}}
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="footer-div">
+      <span class="copy float-left">
+        <p id="demo"></p> &copy; All Rights Reserved
+      </span>
+      <span class="float-right">
+        <ul class="social-media-icon">
+          <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
+        </ul>
+      </span>
+    </div>
+  </div>
+  <!-- [ Main Content ] end -->
+
+
+  <div class="modal fade" id="editAddModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Add/Edit Callback URL - <span class="urlName"></span><span class="urlId d-none"></span></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-3">
+              <select type="text" class="form-control" id="editCallBackDomainUrl">
+                <option value="http://">http://</option>
+                <option value="https://">https://</option>
+              </select>
+            </div>
+            <div class="col-md-9">
+              <textarea class="form-control" id="editCallbackUrl" name="editCallbackUrl" value=""
+                placeholder="Enter Callback URL"></textarea>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-md-3 col-form-label"></label>
+            <label class="col-md-9 col-form-label" style="line-break: anywhere;"><small><b>Sample URL :
+                </b>google.com?mobile=%MOBILE%&camp=%CAMPAIGN_NAME%&rectime=%RECTIME%&circle=%CIRCLE%&operator=%OPERATOR%</small></label>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="updateSpielyLink">Update Spiely Link</button>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,141 @@
+.top-nav {
+    background: var(--primary-color) !important;
+      color: var(--secondary-color) !important;
+  }
+  .shadow {
+/*      box-shadow:none !important; */
+  }
+  .container-fluid{
+/*    margin-top: 55px;  */
+  }
+  .sidebar {
+      width: 250px;
+      height:100%;
+      background-color: var(--primary-color);
+      float: left;
+      width:100%;
+      margin: 0 auto;
+    }
+.sidebar .nav{
+display:flex;
+}
+    ul#menu li{
+      list-style: none;
+    }
+    ul{
+      padding-left: 0px;
+    }
+    ul ul{
+     padding-left: 35px;
+      position: absolute;
+      background-color: rgb(7, 65, 113);
+      z-index: 99;
+      padding-right: 35px;
+    width: max-content;
+    }
+  
+    ul#menu li a {
+      color: white;
+      display: block;
+      padding: 10px;
+      font-size: 14px;
+      -webkit-transition: 0.2s;
+      -moz-transition: 0.2s;
+      -o-transition: 0.2s;
+      transition: 0.2s;
+    }
+    ul#menu li a span{
+      line-height: 1.2em;
+    }
+  
+    ul#menu li a:hover{
+      text-decoration: none;
+      color: black;
+      background: rgb(149, 218, 251);
+      border-left: blue 2px solid;
+    }
+  
+    ul#menu li.active {
+      background-color: #337ab7;
+      color: #fff;
+          border-radius: 4px;
+    }
+
+.breadcrumb h4{
+display:inline-block;
+}
+.sidebar ul li:hover ul{
+display:block;
+}
+
+.sidebar ul li ul{
+display:none;
+}
+
+#login-form {
+    border: 1px solid white;
+    padding: 50px;
+    border-radius: 5px;
+    background: white;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+#login-form h3 {
+    font-weight: bolder;
+    padding-bottom: 10px;
+}
+
+.rad-info-box {
+  margin-bottom: 16px;
+  box-shadow: 1px 1px 2px 0 #cccccc;
+  padding: 20px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  background: white !important;
+}
+
+.rad-info-box i {
+  display: block;
+  background-clip: padding-box;
+  margin-right: 15px;
+  height: 70px;
+/*  width: 60px; */
+  border-radius: 100%;
+  line-height: 70px;
+  text-align: center;
+  font-size: 3em;
+  position: absolute;
+}
+
+.rad-info-box .value,
+.rad-info-box .heading {
+  display: block;
+  position: relative;
+  color: #515d6e;
+  text-align: right;
+  z-index: 10;
+}
+
+.rad-info-box .heading {
+  font-size: 1em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.rad-info-box .value {
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+.rad-txt-success {
+  color: var(--primary-color);
+}
+.modal-backdrop.show{
+opacity:0.5;
+}
+.modal.fade{
+opacity:1;
+}
+.combodate{
+display:flex;
+font-size: x-large;
+}

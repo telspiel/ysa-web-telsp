@@ -1,0 +1,19 @@
+<table id="{{ id }}" class="table1">
+  <thead>
+    <tr>
+      {{#each formattedTableHeader }}
+        <th>{{this}}</th>
+      {{/each}}
+    </tr>
+  </thead>
+    <tbody>
+    {{#each tableData }}
+      <tr>
+        {{#each this }}
+
+          <td>{{{this}}}</td>
+        {{/each}}
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

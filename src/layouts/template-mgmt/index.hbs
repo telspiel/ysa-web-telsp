@@ -1,0 +1,392 @@
+{{> sideNav this }}
+<!-- [ Main Content ] start -->
+<div class="pcoded-main-container">
+  <div class="pcoded-content">
+    <!-- [ Main Content ] start -->
+    <div class="p-0">
+      <div class="p-0 contant-holder">
+        <!-- contant holder start -->
+        <h3 class="main-head-3">Content Template Management</h3>
+        <!-- contant holder end -->
+        <div class="col-md-12 m-auto pt-2 pb-5">
+
+          <!-- Nav tabs -->
+          <ul class="nav nav-tabs mb-4">
+            <li class="nav-item">
+              <a class="nav-link active" data-toggle="tab" href="#add">Add Content Template</a>
+            </li>
+            {{!-- <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#edit" id="edit-campaign-tab">Edit Content Template</a>
+            </li> --}}
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#view" id="view-campaign-tab">View Content Template</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#upload" id="upload-campaign-tab">Upload Content Template</a>
+            </li>
+          </ul>
+
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div class="tab-pane active" id="add">
+              <div class="col-md-10 m-auto ">
+
+                <div class="frm-border">
+                  <div class="add-contact">
+                    <form id="template-msg-form" class="my-4">
+                      <div class="row">
+                        <div class="col-md-4">
+                          <label for="message_type">Content Template Type</label>
+                        </div>
+                        <div class="col-md-8 ">
+                          <div class="row">
+                            <div class="col-md-3 custom-control custom-radio">
+                              <input class="custom-control-input " type="radio" name="contentTemplateType" value="trans"
+                                id="contentTemplateType-0" title="Sender ID type" checked="checked"> <label
+                                class="custom-control-label" for="contentTemplateType-0">Transactional</label>
+                            </div>
+                            <div class=" col-md-3 custom-control custom-radio ">
+                              <input class="custom-control-input" type="radio" name="contentTemplateType" value="promo"
+                                id="contentTemplateType-1" title="Sender ID type">
+                              <label class="custom-control-label" for="contentTemplateType-1">Promotional</label>
+                            </div>
+                            <div class=" col-md-3 custom-control custom-radio ">
+                              <input class="custom-control-input" type="radio" name="contentTemplateType"
+                                value="service" id="contentTemplateType-2" title="Sender ID type"> <label
+                                class="custom-control-label" for="contentTemplateType-2">Service</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row service_type d-none">
+                        <div class="col-md-4">
+                          <label for="message_type">Service Type</label>
+                        </div>
+                        <div class="col-md-8">
+                          <div class="row">
+                            <div class="col-md-4 custom-control custom-radio">
+                              <input class="custom-control-input " type="radio" name="contentTemplateSubType"
+                                value="service-implicit" id="contentTemplateSubType-0" title="Service type"
+                                checked="checked"> <label class="custom-control-label"
+                                for="contentTemplateSubType-0">Service Implicit</label>
+                            </div>
+                            <div class="col-md-4 custom-control custom-radio ">
+                              <input class="custom-control-input" type="radio" name="contentTemplateSubType"
+                                value="service-explicit" id="contentTemplateSubType-1" title="Service type">
+                              <label class="custom-control-label" for="contentTemplateSubType-1">Service
+                                Explicit</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="deptName" class="col-md-4 col-form-label">Select Sender ID</label>
+                        <div class="col-md-6">
+                          <select type="text" class="form-control select2 dropdown" id="senderId" name="senderId" required>
+                           <option readonly value="">-- Select --</option>
+                           {{!-- <option disabled selected>-- Select --</option> --}}
+                          </select>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <div class="form-group">
+                              <label for="txt-from">Entity ID</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <input type="number" class="form-control" id="entityId" placeholder="Add Entity ID"
+                              name="entityId" aria-describedby="add-entity-id" pattern="[0-9]" required>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="templateTitle" class="col-md-4 col-form-label">Content Template Name</label>
+                        <div class="col-md-6">
+                          <input type="text" class="form-control" id="templateTitle" name="templateTitle" value=""
+                            title="Title" placeholder="Template Name" autocomplete="off" required>
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="templateDescription" class="col-md-4 col-form-label">Content Template
+                          Description</label>
+                        <div class="col-md-6">
+                          <input type="text" class="form-control" id="templateDescription" name="templateDescription"
+                            value="" title="Title" placeholder="Template Description" autocomplete="off" required>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="operatorTemplateId" class="col-md-4 col-form-label">Operator Template ID</label>
+                        <div class="col-md-6">
+                          <input type="number" class="form-control" id="operatorTemplateId" name="operatorTemplateId"
+                            value="" title="Title" placeholder="Operator Template ID" autocomplete="off" required pattern="[0-9]">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="templateType-0" class="col-md-4 col-form-label">Template Type</label>
+                        <div class="col-md-6">
+                          <div class="row">
+                            <div class="custom-control custom-radio col-md-4">
+                              <input class="custom-control-input" type="radio" name="templateType" value="PM"
+                                id="msgType-0" title="Select Message Type" checked="checked">
+                              <label class="custom-control-label" for="templateType-0">Plain Text</label>
+                            </div>
+                            <div class="custom-control custom-radio col-md-4">
+                              <input class="custom-control-input" type="radio" name="templateType" value="UC"
+                                id="templateType-2" title="Select Message Type"> <label class="custom-control-label"
+                                for="templateType-2">Unicode</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- <div class="row">
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <div class="form-group">
+                            <label for="txt-from">Header ID</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">  
+                          <input type="text" class="form-control" id="headerid"
+                            placeholder="Add Header ID" aria-describedby="add-header-id" maxlength="6">
+                        </div>
+                      </div>
+                      </div> -->
+
+                      <div class="form-group row">
+                        <label for="templateText" class="col-md-4 col-form-label">Message Text</label>
+                        <div class="col-md-6">
+                          <textarea id="templateText" name="templateText" rows="5" class="form-control"
+                            placeholder="Message Text" required></textarea>
+                        </div>
+
+                        {{!-- <div class="col-md-2 mt-4"><button type="button" id="insertVar"
+                            class="btn btn-primary btn-form">Insert Variable</button>
+                        </div> --}}
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="status" class="col-md-4 col-form-label">Status</label>
+                        <div class="col-md-6">
+                          <select type="text" class="form-control" id="status" name="status">
+                            <option value="active">Active</option>
+                            <option value="inactive">In Active</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="form-group text-center mt-5 mb-4">
+                        <button id="btnPreview" type="submit" class="btn btn-primary btn-form"><i
+                            class="feather save icon-save float-left mt-1"></i>&ensp;Preview</button>
+                        <button id="btnCancel" type="reset" class="btn btn-secondary btn-form"><i
+                            class="feather x-square icon-x-square float-left mt-1"></i>&ensp;Cancel</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="tab-pane" id="view">
+              <br>
+              <table class="table table-striped table-sm table-bordered dt-responsive nowrap" id="tavleViewTemplate"
+                style="width:100%">
+
+              </table>
+              <div class="tablePageNavi text-center">
+                <ul id="misPagination" class="pagination table-pagination">
+                  <li class="page-item"><a class="page-link" id="pagePrev" href="#">Previous</a></li>
+                  <li class="page-item"><a class="page-link" id="pageNext" href="#">Next</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="tab-pane" id="upload">
+              <div class="col-md-6 py-4 m-auto">
+
+                <div id="upload-gblacklist-form" class="gblacklist-form">
+                  <h4>Upload Content Template</h4>
+                  <div id="upload-content-template-form" class="gblacklist-form col-md-12 mt-4">
+                    <form id="upload-gblacklist" action="#" method="post" autocomplete="off">
+                      {{!-- <div class="form-group row">
+                        <label for="userName" class="col-form-label">Select User</label>
+                        <select class="form-control custom-select" name="userName" id="userName" aria-label="Sender Id"
+                          aria-describedby="mobile-addon">
+                          <option disabled selected> -- Choose User --</option>
+                        </select>
+                      </div> --}}
+                      <div class="row">
+                        <div class="col-md-6 row">
+                          <label for="fileType-0" class="col-form-label">File Type</label>
+                        </div>
+                        <div class="col-md-8 mt-2">
+                          <div class="form-group row">
+                            <div class="custom-control custom-radio col-md-6">
+                              <input class="custom-control-input fileType" type="radio" name="fileType"
+                                value="HEADER_FILE" id="fileType-0" title="Select Message Type" checked="checked">
+                              <label class="custom-control-label" for="fileType-0">HEADER_FILE</label>
+                            </div>
+                            <div class="custom-control custom-radio col-md-3">
+                              <input class="custom-control-input fileType" type="radio" name="fileType"
+                                value="TEMPLATE_FILE" id="fileType-2" title="Select Message Type"> <label
+                                class="custom-control-label" for="fileType-2">TEMPLATE_FILE</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="entityIdUploadPage" class="">Entity Id</label>
+                        <div class="form-group col-md-8">
+                        <input type="number" class="form-control" id="entityIdUploadPage" name="description" value=""
+                          title="Enter Description" placeholder="Entity Id" pattern="[0-9]" required=""> 
+                        </div> 
+                      </div>
+                      <div class=" row ">
+                        <div class="col-md-4 row">
+                          <label for="fileTypes-0" class="col-form-label">Template File Type</label>
+                        </div>
+                        <div class="col-md-8 mt-2">
+                          <div class="row">
+                            <div class="custom-control custom-radio col-md-2">
+                              <input class="custom-control-input" type="radio" name="fileTypes" value="csv"
+                                id="fileTypes-0" title="Select File Type" checked="checked"> <label
+                                class="custom-control-label" for="fileTypes-0">csv</label>
+                            </div>
+                            <div class="custom-control custom-radio col-md-2 tmpfile">
+                              <input class="custom-control-input" type="radio" name="fileTypes" value="xlsx"
+                                id="fileTypes-1" title="Select File Type">
+                              <label class="custom-control-label" for="fileTypes-1">Xlsx</label>
+                            </div>
+                            <div class="custom-control custom-radio col-md-2 tmpfile">
+                              <input class="custom-control-input" type="radio" name="fileTypes" value="xls"
+                                id="fileTypes-2" title="Select File Type">
+                              <label class="custom-control-label" for="fileTypes-2">Xls</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <br>
+                      <div class="form-group row">
+                        <label for="orgName" class="">File </label>
+                        <div class="form-group col-md-9">
+                        <div class="custom-file">
+                          <input type="file" class="custom-file-input" id="selectFile" name="files"
+                            accept=".csv, .txt, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel">
+                          <label class="custom-file-label" for="customFile">Choose file</label>
+                          </div>
+                        </div>
+                        <small>(only csv,Xlsx,Xls comma separated is allowed)</small>
+                      </div>
+                      <div class="form-group row">
+                        <label for="operatorId" class="col-form-label">Operator</label>
+                        <div class="form-group col-md-8">
+                        <select class="form-control custom-select" name="senderId" id="operatorId"
+                          aria-label="Sender Id" aria-describedby="mobile-addon">
+                          <option disabled selected>-- Select --</option>
+                          <option value="VIL">Vodafone Idea</option>
+                          <option value="JIO">JIO</option>
+                          <option value="AIRTEL">AIRTEL</option>
+                          <option value="BSNL">BSNL</option>
+                          <option value="VIDEOCON">Videocon</option>
+                          <option value="ALL">ALL</option>
+                        </select>
+                        <a href="#" id="sampleFileLink" style="display: none;">Sample File</a>
+                        </div>
+                      </div>
+                      <div class="form-group row mt-4">
+                        <button type="submit" id="" class="btn btn-primary">Upload</button>&nbsp;&nbsp;
+                        <button type="reset" id="cancelForm" class="btn btn-secondary">Cancel</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-div">
+    <span class="copy float-left">
+      <p id="demo"></p> &copy; All Rights Reserved
+    </span>
+    <span class="float-right">
+      <ul class="social-media-icon">
+        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
+      </ul>
+    </span>
+  </div>
+</div>
+<!-- [ Main Content ] end -->
+{{> mainLoader }}
+
+
+<!-- Modal -->
+<div id="messageModal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-md" >
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Confirm Request</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <table class="table table-bordered table-responsive">
+          <tr>
+            <td width="25%"><b>Template Type</b></td>
+            <td id="templateType">{{name}}</td>
+          </tr>
+          <tr class="serviceTypeModal">
+            <td width="25%"><b>Service Type</b></td>
+            <td id="serviceType">{{name}}</td>
+          </tr>
+          <tr>
+            <td width="25%"><b>Template Name</b></td>
+            <td id="templateTitleTxt">{{name}}</td>
+          </tr>
+          <tr>
+            <td><b>Template Type</b></td>
+            <td id="templateTypeTxt" style="white-space: pre-wrap;"></td>
+          </tr>
+          <tr>
+            <td><b>Message Text</b></td>
+            <td><textarea id="templateTextTxt" rows="3" readonly cols="45"></textarea></td>
+          </tr>
+          <tr>
+            <td><b>Select Sender Id</b></td>
+            <td><span id="senderIdTxt"></span></td>
+          </tr>
+          <tr>
+            <td><b>Status</b></td>
+            <td><span id="statusTxt"></span></td>
+          </tr>
+          <tr>
+            <td><b>Operator Template Id</b></td>
+            <td><span id="operatorTemplateIdTxt"></span></td>
+          </tr>
+          <tr>
+            <td><b>Variable Count</b></td>
+            <td><span id="variableCount"></span></td>
+          </tr>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="sendNow">Submit</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

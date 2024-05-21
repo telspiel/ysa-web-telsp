@@ -1,0 +1,129 @@
+{{> sideNav }}
+<!-- [ Main Content ] start -->
+<div class="pcoded-main-container">
+    <div class="pcoded-content">
+        <!-- [ Main Content ] start -->
+        <div class="row contant-holder-dash">
+
+            <div class="col-md-8">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5>Clicker Status</h5>
+                        </div>
+                        <div class="card-body">
+                            {{!-- <div id="area-chart-1"></div> --}}
+
+                            {{!-- <div id="chart"></div> --}}
+                            <div id="clickerStatus"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 ">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5>Delivery Status</h5>
+                        </div>
+                        <div class="card-body">
+                            <div id="deliveryStatus"></div>
+                            {{!-- <div id="hourlyGraph"></div> --}}
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                  <button class="btn btn-info mx-auto d-none " id="donwloadFileButton" ></button>
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+                <!-- order-card start -->
+                <div class="col-md-12 dash-tab">
+                    <div class="card bg-c-blue order-card">
+                        <div class="card-body">
+                            <h6 class="text-white">Total Submit</h6>
+                            <h2 class="text-right text-white">
+                                <i class="feather clock icon-clock float-left"></i>
+                                <span class="counter-Data" id="totalSubmit">0</span>
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 dash-tab">
+                    <div class="card bg-c-green order-card">
+                        <div class="card-body">
+                            <h6 class="text-white">Total Delivered</h6>
+                            <h2 class="text-right text-white">
+                                <i class="feather calendar icon-calendar float-left"></i>
+                                <span id="totalDelivered">0</span>
+                            </h2>
+                            {{!-- <p class="m-b-0">This Month Report<span class="float-right"></span></p> --}}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 dash-tab">
+                    <div class="card bg-c-yellow order-card">
+                        <div class="card-body">
+                            <h6 class="text-white">Total Failed</h6>
+                            <h2 class="text-right text-white">
+                                <i class="feather check-square icon-check-square float-left"></i>
+                                <span id="totalFailed">0</span>
+                            </h2>
+                            {{!-- <p class="m-b-0">Previous 2 Months Report<span class="float-right"></span></p> --}}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 dash-tab">
+                    <div class="card bg-c-red order-card">
+                        <div class="card-body">
+                            <h6 class="text-white">Total Awaited</h6>
+                            <h2 class="text-right text-white">
+                                <i class="feather mail icon-mail float-left"></i>
+                                <span id="totalAwaited">0</span>
+                            </h2>
+                            {{!-- <p class="m-b-0">Average Message Report<span class="float-right"></span></p> --}}
+                        </div>
+                    </div>
+                </div>
+                <!-- order-card end -->
+                <!-- order-card start -->
+                <div class="col-md-12 dash-tab">
+                    <div class="card bg-c-blue order-card">
+                        <div class="card-body">
+                            <h6 class="text-white">Total Clicks</h6>
+                            <h2 class="text-right text-white">
+                                <i class="feather check-circle icon-check-circle float-left"></i>
+                                <span id="totalClicks">0</span>
+                            </h2>
+                            {{!-- <p class="m-b-0">Previous Quartly Report<span class="float-right"></span></p> --}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 py-5">
+                <div id="summaryReport"></div>
+            </div>
+
+            <div class="col-md-6 py-5">
+                <div id="hourlyGraph"></div>
+            </div>
+        </div>
+        <!-- [ Main Content ] end -->
+
+    </div>
+    <div class="footer-div">
+        <span class="copy float-left">
+            <p id="demo"></p> &copy; All Rights Reserved
+        </span>
+        <span class="float-right">
+            <ul class="social-media-icon">
+                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
+            </ul>
+        </span>
+    </div>
+</div>

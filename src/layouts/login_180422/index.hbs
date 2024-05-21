@@ -1,0 +1,94 @@
+{{!-- <div class="container-fluid main-wrapper p-0"> --}}
+  <div class="pcoded-main-container login-page p-0 m-0">
+    <div class="body row scroll-y">
+      <div class="row justify-content-center h-100">
+        <div class="col-md-5 align-self-center form-block">
+
+          <div class="col-md-5 offset-md-3 text-center">
+            {{!-- <img src="images/logo.svg" class="m-b-30 p-b-30" /> --}}
+
+            <h5 class="p-b-10">LogIn</h5>
+            <form id="login-form p-4">
+              <div class="form-group">
+                <input type="text" class="form-control" id="userId" placeholder="Username" required>
+              </div>
+              <div class="form-group">
+                <input type="password" class="form-control" id="userPass" placeholder="Password" required>
+                <span toggle="#userPass" class="feather icon-eye field-icon toggle-password"></span>
+              </div>
+              <div class="checkbox" style="text-align: left;">
+                <label>
+                  <input type="checkbox" id="rememberMe" class="checkbox"> <span></span> Remember Me
+                </label>
+
+                {{!-- <p class="small privacy_terms">By clicking on 'Login', you accept our <br /><span><a
+                      href="terms_conditions.pdf" target="_blank"><u>Terms &amp; Conditions.</u></a></span></p> --}}
+              </div>
+
+              <div class="otp-wrapper otp-event d-none">
+                <h5 class="text-center">Listen to your mobile, we have sent you code to verify you</h5>
+                <div class="otp-co  ntainer">
+                  <input type="tel" id="otp-number-input-1" class="otp-number-input" maxlength="1" autocomplete="off">
+                  <input type="tel" id="otp-number-input-2" class="otp-number-input" maxlength="1" autocomplete="off">
+                  <input type="tel" id="otp-number-input-3" class="otp-number-input" maxlength="1" autocomplete="off">
+                  <input type="tel" id="otp-number-input-4" class="otp-number-input" maxlength="1" autocomplete="off">
+                </div>
+                <div>
+                  <button id="confirm" type="button" class="otp-submit" disabled>Verify OTP</button><br />
+                  <a href="#" id="resend-otp"> Not Received Yet ? Resend OTP </a>
+                </div>
+              </div>
+              <div class="form-group text-center user-verify-btn">
+                <button type="button" class="btn btn-md btn-primary login-btn" id="login-btn"> <i
+                    class="feather icon-log-in"> </i> LOGIN</button>
+              </div>
+              <div class="form-group checkbox">
+                {{!-- <label>
+                  <input type="checkbox" id="rememberMe" class="checkbox"> <span></span> Remember Me
+                </label> --}}
+
+                <p class="small privacy_terms">By clicking on 'Login', you accept our <br /><span><a
+                      href="terms_conditions.pdf" target="_blank"><u>Privacy Policy.</u></a></span></p>
+              </div>
+
+		<div class="form-group checkbox">
+                              {{!-- <label>
+                                <input type="checkbox" id="rememberMe" class="checkbox"> <span></span> Remember Me
+                              </label> --}}
+
+                              <p class="small privacy_terms">By clicking on 'Login', you accept our <br /><span><a
+                                    href="terms_conditions.pdf" target="_blank"><u>Information Security Policy</u></a></span></p>
+              </div>
+
+            </form>
+          </div>
+        </div>
+        <div class="col-md-7 align-self-end image-block h-100 p-0" style="display: flex;background-color: #eff0f5;">
+          <div class="section-image" style="margin: auto;">
+            {{!-- <span class="counter-Data">486</span> --}}
+            <img src="images/login-showcase.jpeg" class="right-bg" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-div footer row">
+    <div class="container">
+      <span class="copy float-left">
+        <p class="rights"></p> © 2021 telSpiel Communications Pvt. Ltd. | All Rights Reserved
+      </span>
+      <span class="float-right">
+        <span>Follow Us : </span>
+        <ul class="social-media-icon">
+          <li><a href="https://www.facebook.com/telspiel" target="_blank"><i class="fa fa-facebook"
+                aria-hidden="true"></i></a></li>
+          <li><a href="https://twitter.com/TelSpiel" target="_blank"><i class="fa fa-twitter"
+                aria-hidden="true"></i></a></li>
+          <li><a href="https://www.linkedin.com/company/telspiel" target="_blank"><i class="fa fa-linkedin"
+                aria-hidden="true"></i></a></li>
+          <li><a href="https://www.youtube.com/channel/UCJNJb4iAloNSN-f2J41X8Jw" target="_blank"><i
+                class="fa fa-youtube" aria-hidden="true"></i></a></li>
+        </ul>
+      </span>
+    </div>
+  </div>

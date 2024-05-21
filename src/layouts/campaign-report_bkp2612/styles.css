@@ -1,0 +1,35 @@
+/* #controls-form {
+  width: 100%;
+  padding: 20px 0 0 50px;
+}
+
+.controls-form button {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  width: 50%;
+} */
+
+.table-pagination li a {
+  color: var(--primary-color);
+}
+
+#pagePrev, #pageNext {
+  display: none;
+}
+#misTable_length,#misTable_filter,#misTable_info,#misTable_paginate{
+display:none;
+}
+#CampaignReportdonwload{
+  color:white;
+}
+th, td { white-space: nowrap; }
+div.dataTables_wrapper {
+    margin: 0 auto;
+}
+
+div.container {
+    width: 80%;
+}
+.text-wrap{
+  white-space: pre-wrap;
+}

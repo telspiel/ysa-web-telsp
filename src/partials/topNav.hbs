@@ -1,0 +1,51 @@
+{{#unless navDisplay}}
+
+{{!-- <nav class="navbar fixed-top shadow p-0 top-nav" style="margin-bottom: 0px;">
+  <div class="col-md-2 p-2 brand-logo">
+    <a class="logo-link" href="#"></a>
+  </div>
+  <div class="col-md-10 p-2 text-right top-menu">
+    <ul class="m-0 pr-4 float-right" id="topNavList"></ul>
+  </div>
+</nav> --}}
+
+<!-- [ Header ] start -->
+<header class="navbar pcoded-header navbar-expand-lg navbar-light headerpos-fixed header-blue">
+  <div class="m-header">
+    <a class="mobile-menu" id="mobile-collapse" href="#!"><span></span></a>
+    <a href="#!" class="b-brand">
+      <!-- ========   change your logo hear   ============ -->
+      <img src="/images/logo.svg" alt="" class="logo" style="width: 150px;">
+    </a>
+    <a href="#!" class="mob-toggler">
+      <i class="feather icon-more-vertical"></i>
+    </a>
+  </div>
+  <div class="collapse navbar-collapse">
+
+    <ul class="navbar-nav ml-auto">
+
+      <li>
+        <div class=" drp-user">
+          <!-- dropdown class remove from div -->
+          <img src="/images/question.svg" class="img-radius wid-30 m-l-15" alt="User-Profile-Image">
+          <img src="/images/sitemap.svg" class="wid-30 m-l-15" alt="User-Profile-Image">
+          <a href="#" id="avatar-img">
+            <!-- class="dropdown-toggle" data-toggle="dropdown" remove from div -->
+            <img src="/images/user.svg" class="img-radius wid-40" alt="User-Profile-Image">
+          </a>
+          <span class="drp-user" id="topNavList"></span>
+        </div>
+      </li>
+    </ul>
+
+    <ul class="navbar-nav ml-auto profile-options d-none">
+      <li><a href="/user-profile"> <i class="feather icon-user"></i>&nbsp; &nbsp;User Profile</a></li>
+      {{!-- <li><a href="#"><i class="feather icon-info"> </i>&nbsp; &nbsp;User Id : <b><span id="userId"></span></b></a></li> --}}
+      <li><a href="/login"> <i class="feather icon-log-out"></i>&nbsp; &nbsp;Logout</a></li>
+    </ul>
+  </div>
+</header>
+<!-- [ Header ] end -->
+
+{{/unless}}

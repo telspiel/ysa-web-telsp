@@ -1,0 +1,22 @@
+
+
+.table-pagination li a {
+  color: var(--primary-color);
+}
+
+#pagePrev, #pageNext {
+  display: none;
+}
+/*#misTable_length,#misTable_filter,#misTable_info,#misTable_paginate{
+display:none;
+}*/
+div#misTable_filter{
+  display: block;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
